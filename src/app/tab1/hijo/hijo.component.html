@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <div class="header">
+    {{titleHeader}}
+  </div>
+  <div class="content mt-4">
+    <div class="container">
+
+      <form [formGroup]="formHijo">
+
+        <div class="row mt-4">
+          <div class="col-12">
+            <label >Nombre: </label>
+            <input type="text" formControlName="name">
+          </div>
+        </div>
+  
+        <div class="row mt-4">
+          <div class="col-12">
+            <label >Apellido: </label>
+            <input type="text" formControlName="lastName">
+          </div>
+        </div>
+  
+        <button class="mt-4" (click)="onClickButton()">Boton Hijo</button>
+
+      </form>
+
+    </div>
+  </div>
+  <div class="footer mt-4">
+    {{titleFooter}}
+  </div>
+</div>

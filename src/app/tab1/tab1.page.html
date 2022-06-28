@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      HOME
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div class="container">
+    <form [formGroup]="formPadre">
+
+      <div class="row mt-4">
+        <div class="col-12">
+          <label >cui: </label>
+          <input type="text" formControlName="cui">
+        </div>
+      </div>
+
+      <app-hijo
+        titleHeader="HEADER DESDE PADRE"
+        titleFooter="FOOTER DESDE PADRE"
+        (onClickBtn)="clickBtnHijo()"
+        (formReady)="addFormControl('formHijo',$event)"
+      >
+      </app-hijo>
+
+      <button class="mt-4" (click)="onClickButtonPadre()">Boton Padre</button>
+
+    </form>
+  </div>
+
+</ion-content>
